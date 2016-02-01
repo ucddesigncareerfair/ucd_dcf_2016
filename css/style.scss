@@ -1,0 +1,14 @@
+---
+---
+
+$cyan: #429DC9;
+$magenta: #EE519D;
+$yellow: #F7CA18;
+
+@import
+    "base/_mixins.scss",
+    "base/_normalize.scss",
+    "base/_global.scss",
+    "_header.scss",
+    "_index.scss"
+;

@@ -1,0 +1,80 @@
+@mixin button-variant($background, $border, $color, $shadow, $textShadow) {
+    background-color: $background;
+    border-color: $border;
+    @include box-shadow($shadow);
+    color: $color;
+    text-shadow: $textShadow;
+
+    &:focus,
+    &:active,
+    &:focus:active {
+        background-color: darken($background, 2%);
+        border-color: $border;
+        @include box-shadow(inset 0 1px 2px rgba(0,0,0,.125));
+        color: $color;
+    }
+
+    &:hover {
+        background-color: lighten($background, 8%);
+        border-color: $border;
+        color: $color;
+    }
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($transitions...) {
+    $unfoldedTransitions: ();
+    @each $transition in $transitions {
+        $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+    }
+  
+    -webkit-transition: $unfoldedTransitions;
+    -moz-transition: $unfoldedTransitions;
+    -o-transition: $unfoldedTransitions;
+    transition: $unfoldedTransitions;
+}
+
+@function unfoldTransition ($transition) {
+    // Default values
+    $property: all;
+    $duration: .2s;
+    $easing: null; // Browser default is ease, which is what we want
+    $delay: null; // Browser default is 0, which is what we want
+    $defaultProperties: ($property, $duration, $easing, $delay);
+
+    // Grab transition properties if they exist
+    $unfoldedTransition: ();
+    @for $i from 1 through length($defaultProperties) {
+        $p: null;
+        @if $i <= length($transition) {
+            $p: nth($transition, $i)
+        } @else {
+            $p: nth($defaultProperties, $i)
+        }
+        $unfoldedTransition: append($unfoldedTransition, $p);
+    }
+
+    @return $unfoldedTransition;
+}
+
+@mixin transition-delay($delay) {
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+
+@mixin transform($transformation) {
+    -webkit-transform: $transformation;
+    -ms-transform: $transformation;
+    transform: $transformation;
+}

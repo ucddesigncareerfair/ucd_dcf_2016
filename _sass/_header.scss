@@ -1,0 +1,51 @@
+.navbar {
+    border: none;
+    @include border-radius(0px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    .bar {
+        background: #429dc9; /* Old browsers */
+        background: -moz-linear-gradient(left,  #429dc9 0%, #ee519d 50%, #f7ca18 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #429dc9 0%,#ee519d 50%,#f7ca18 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #429dc9 0%,#ee519d 50%,#f7ca18 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#429dc9', endColorstr='#f7ca18',GradientType=1 ); /* IE6-9 */
+        display: block;
+        height: 8px;
+        width: 100%;
+    }
+
+    .logo {
+        display: inline-block;
+        float: left;
+        max-width: 130px;
+        padding: 5px 0px;
+    }
+
+    .nav {
+        display: inline-block;
+        float: right;
+        padding: 23px 0px;
+        text-align: right;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                @include transition(opacity 0.25s);
+
+                &:hover {
+                    background: none;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

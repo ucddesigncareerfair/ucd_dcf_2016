@@ -1,0 +1,124 @@
+section {
+    &.main {
+        background-image: url('../img/main_hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        padding: 200px 0px 180px 0px;
+        text-align: center;
+
+        .title {
+            margin-bottom: 40px;
+            width: 800px;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 300;
+            margin: 15px 0px;
+        }
+
+        h3 {
+            font-weight: 100;
+            font-style: italic;
+            margin: 35px auto 0 auto;
+            max-width: 600px;
+        }
+    } // end .main
+
+    &.options {
+        > div {
+            display: inline-block;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            width: 50%;
+
+            > div {
+                color: #ffffff;
+                padding: 75px;
+                position: relative;
+
+                .inner {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &.for-students:before,
+                &.for-employers:before {
+                    border-style: solid;
+                    border-width: 2289.4px 4680px 0 0;
+                    content: "";
+                    display: block;
+                    height: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @include transform(rotate(360deg));
+                    width: 0;
+                    z-index: 1;
+                }
+
+                &.for-students {
+                    background: $yellow;
+                    padding-left: 20%;
+
+                    &:before {
+                        border-color: #F6D140 transparent transparent;
+                    }
+                }
+
+                &.for-employers {
+                    background: $cyan;
+                    padding-right: 20%;
+
+                    &:before {
+                        border-color: #50A3CB transparent transparent;
+                    }
+                }
+            }
+
+            h1 {
+                font-size: 45px;
+                margin: 0 0 15px 0;
+            }
+
+            ul, li {
+                list-style: none;
+                margin: 0;
+                padding: 0px;
+            }
+
+            ul.links {
+                margin-top: 30px;
+            }
+
+            li {
+                display: inline-block;
+                float: left;
+                margin: 0px 8px 8px 0px;
+            }
+        }
+    } // end .options
+
+    &.contact {
+        background: $magenta;
+        padding: 50px 0px;
+        text-align: center;
+
+        h3 {
+            color: #ffffff;
+            display: inline-block;
+            font-weight: 200;
+            margin: 0 15px 0 0;
+            position: relative;
+            vertical-align: middle;
+        }
+    }
+}
