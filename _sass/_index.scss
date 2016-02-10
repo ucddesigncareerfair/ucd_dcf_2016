@@ -25,10 +25,12 @@ section {
         }
 
         h3 {
+            font-size: 20px;
             font-weight: 100;
             font-style: italic;
+            line-height: 28px;
             margin: 35px auto 0 auto;
-            max-width: 600px;
+            max-width: 700px;
         }
     } // end .main
 
@@ -66,11 +68,11 @@ section {
                 }
 
                 &.for-students {
-                    background: $yellow;
+                    background: $magenta;
                     padding-left: 20%;
 
                     &:before {
-                        border-color: #F6D140 transparent transparent;
+                        border-color: #F461A8 transparent transparent;
                     }
                 }
 
@@ -108,12 +110,13 @@ section {
     } // end .options
 
     &.contact {
-        background: $magenta;
+        background: #ffffff;
+        border-top: 8px solid $yellow;
         padding: 50px 0px;
         text-align: center;
 
         h3 {
-            color: #ffffff;
+            color: #444444;
             display: inline-block;
             font-weight: 200;
             margin: 0 15px 0 0;
