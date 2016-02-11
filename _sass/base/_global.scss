@@ -73,3 +73,24 @@ p {
         padding: 8px 18px;
     }
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.page-title {
+    color: #ffffff;
+    padding: 30px;
+
+    h2 {
+        margin: 0px;
+    }
+
+    &.team {
+        background: $yellow;
+    }
+
+    &.contact {
+        background: $magenta;
+    }
+}

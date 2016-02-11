@@ -2,14 +2,39 @@
     <span class="bar"></span>
     <div class="container">
         <a class="logo" href="/">
-            <img src="img/logo.png">
+            {% if page.page == "home" %}
+                <img src="/img/logo.png">
+            {% else %}
+                <img src="/img/logo_black.png">
+            {% endif %}
         </a>
         <ul class="nav">
-            <li><a href="#">ABOUT <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="#">STUDENTS <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="#">EMPLOYERS <i class="fa fa-caret-down"></i></a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="/about/fair">ABOUT <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/about/fair">THE FAIR</a></li>
+                    <li><a href="/about/team">THE TEAM</a></li>
+                    <li><a href="/past-fairs">PAST FAIRS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="/students">STUDENTS <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">RSVP</a></li>
+                    <li><a href="#">RESOURCES</a></li>
+                    <li><a href="#">COMPANY BIOS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="/employers">EMPLOYERS <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">BENEFITS</a></li>
+                    <li><a href="#">REGISTER</a></li>
+                    <li><a href="#">PREPARE</a></li>
+                </ul>
+            </li>
             <li><a href="#">CALENDAR</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="/contact">CONTACT</a></li>
         </ul>
     </div>
 </header>

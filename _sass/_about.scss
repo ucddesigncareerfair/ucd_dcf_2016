@@ -1,0 +1,111 @@
+section#us header#about-us h1{
+    font-weight:400;
+}
+
+section#us article img {
+    display:block;
+    margin:auto;
+    width:100%;
+}
+
+section#us article p {
+    width:700px;
+    margin:auto;
+    margin-top:15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    text-align: justify;
+}
+
+section#us nav#button{
+    margin-top:40px;
+    text-align:center;
+}
+
+section#us nav#button ul li {
+    display: inline;
+    margin: 20px;
+    padding: 10px 17px 10px 17px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    color: #ea529d;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+section#us nav#button ul li a:link {
+    border-color: #ea529d;
+    color:#ea529d;
+    text-decoration: none;
+}
+
+section#us nav#button ul li a:hover {
+    /*add hover effect*/
+}
+
+section#team article{
+    margin-top: 60px;
+}
+
+section#team article ul {
+    margin-right: -3px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+section#team article ul li{
+    height: 350px;
+    margin-left: -1px;
+    margin-top:-1px;
+    float:left;
+    list-style-type: none;
+    text-align:center;
+    border: 1px solid #e1e1e1;
+    width: 33.333%;
+    overflow: hidden;
+    @include transition(background 0.5s);
+}
+
+section#team article ul li h2,
+section#team article ul li h3 {
+    @include transition(transform 0.5s);
+}
+
+section#team article ul li h2 {
+    margin: 0px;
+    @include transform(translateY(160px));
+}
+
+section#team article ul li h3 {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 400px;
+    @include transform(translateY(500px));
+}
+
+section#team article ul li:nth-child(1):hover,
+section#team article ul li:nth-child(6):hover {
+    background: #67acd3;
+}
+
+section#team article ul li:nth-child(2):hover,
+section#team article ul li:nth-child(4):hover {
+    background: #ef79af;
+}
+
+section#team article ul li:nth-child(3):hover,
+section#team article ul li:nth-child(5):hover {
+    background: #f9d555;
+}
+
+section#team article ul li:hover h2 {
+    @include transform(translateY(110px));
+}
+
+section#team article ul li:hover h3 {
+    @include transform(translateY(120px));
+}
