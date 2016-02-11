@@ -55,6 +55,10 @@ p {
         @include button-variant($yellow, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
     }
 
+    &.btn-magenta {
+        @include button-variant($magenta, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
+    }
+
     &.btn-white {
         color: #ffffff;
         border-color: #ffffff;
