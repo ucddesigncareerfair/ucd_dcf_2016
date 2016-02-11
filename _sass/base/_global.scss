@@ -47,6 +47,10 @@ p {
     padding: 12px 25px;
     @include transition(color 0.15s, background 0.15s);
 
+    &.btn-cyan {
+        @include button-variant($cyan, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
+    }
+
     &.btn-yellow {
         @include button-variant($yellow, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
     }
