@@ -8,22 +8,51 @@ $(document).ready(function() {
     
     setTimeout(function() {
         $('body.home .main').addClass('active');
-    }, 1000);
+    }, 1500);
 
-    checkOptionsHeight();
+    equalHeight();
 });
 
 $(window).resize(function() {
-    checkOptionsHeight();
+    equalHeight();
 });
 
-function checkOptionsHeight() {
-    var fsHeight = $('.for-students').outerHeight();
-    var feHeight = $('.for-employers').outerHeight();
-    if(fsHeight > feHeight) {
-        $('.for-employers').css('height', fsHeight);
+function equalHeight(container){
+
+    var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     $el,
+     topPosition = 0;
+ $(container).each(function() {
+
+   $el = $(this);
+   $($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
     }
-    if(fsHeight < feHeight) {
-        $('.for-students').css('height', feHeight);
-    }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+   }
+ });
 }
+
+$(window).load(function() {
+  equalHeight('.options .option');
+});
+
+
+$(window).resize(function(){
+  equalHeight('.options .option');
+});

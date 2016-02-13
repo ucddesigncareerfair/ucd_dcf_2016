@@ -211,3 +211,14 @@ section {
         }
     }
 }
+
+@media (max-width: 767px) {
+    section {
+        &.options {
+            .left,
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}
