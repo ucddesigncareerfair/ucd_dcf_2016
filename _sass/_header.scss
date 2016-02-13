@@ -1,6 +1,7 @@
 .navbar {
     border-bottom: 1px solid #e1e1e1;
     margin-bottom: 0px;
+    position: relative;
 
     .bar {
         background: #429dc9; /* Old browsers */
@@ -46,18 +47,32 @@
 
             &.dropdown {
                 .dropdown-menu {
-                    background: none;
+                    background: rgba(0,0,0,0.8);
                     border: 0px;
+                    @include border-radius(2px);
                     @include box-shadow(none);
+                    display: block;
                     float: right;
-                    left: auto;
+                    left: -99999px;
                     margin-top: 0px;
-                    padding: 0px;
-                    right: 0;
-                    text-align: right;
+                    min-width: 0px;
+                    opacity: 0;
+                    padding: 6px 0px;
+                    right: auto;
+                    @include transform(translateY(20px));
+                    @include transition(transform 0.5s, opacity 0.5s);
 
                     a {
-                        padding: 8px 20px;
+                        padding: 6px 20px;
+                    }
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        left: auto;
+                        opacity: 1;
+                        right: auto;
+                        @include transform(translateY(0px));
                     }
                 }
             }

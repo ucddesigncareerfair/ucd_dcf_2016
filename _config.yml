@@ -7,13 +7,13 @@
 
 # Site settings
 title: UC Davis Design Career Fair 2016
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+email: ucddesigncareerfair@gmail.com
+description: > # The 2nd Annual UC Davis Design Career Fair aims to empower students to take risks not only in their designs, but also career aspirations. By providing students career resources we hope to bridge our talented designers to esteemed companies.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://ucddesigncareerfair.com" # the base hostname & protocol for your site
+
+sass:
+  style: compressed
 
 # Build settings
 markdown: kramdown

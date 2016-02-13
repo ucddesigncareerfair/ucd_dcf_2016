@@ -8,6 +8,7 @@ body.home {
         right: 0;
         top: 0;
         width: 100%;
+        z-index: 99;
 
         .nav {
             li {
@@ -30,7 +31,8 @@ section {
         background-position: center;
         background-repeat: no-repeat;
         color: #ffffff;
-        padding: 200px 0px 180px 0px;
+        height: 800px;
+        position: relative;
         text-align: center;
 
         .title {
@@ -57,19 +59,59 @@ section {
             margin: 35px auto 0 auto;
             max-width: 700px;
         }
+
+        .main-inner {
+            left: 0px;
+            margin: 0 auto;
+            overflow: hidden;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            @include transition(opacity 1s, width 0.75s);
+            top: 50%;
+            width: 0px;
+
+            .inner-content {
+                left: 50%;
+                margin-left: -400px;
+                padding: 30px 0px;
+                position: absolute;
+                width: 800px;
+            }
+
+            .brackets {
+                position: absolute;
+                width: 50px;
+
+                &.left {
+                    left: 0px;
+                }
+
+                &.right {
+                    right: 0px;
+                }
+            }
+        }
+
+        &.active {
+            .main-inner {
+                left: 0px;
+                opacity: 1;
+                width: 800px;
+            }
+        }
     } // end .main
 
     &.options {
-        > div {
+        .left,
+        .right {
             display: inline-block;
             float: left;
-            overflow: hidden;
             position: relative;
             width: 50%;
 
             > div {
                 color: #ffffff;
-                padding: 75px;
                 position: relative;
 
                 .inner {
@@ -77,8 +119,8 @@ section {
                     z-index: 2;
                 }
 
-                &.for-students:before,
-                &.for-employers:before {
+                &.for-students .bg:before,
+                &.for-employers .bg:before {
                     border-style: solid;
                     border-width: 2289.4px 4680px 0 0;
                     content: "";
@@ -93,21 +135,40 @@ section {
                 }
 
                 &.for-students {
-                    background: $magenta;
-                    padding-left: 20%;
+                    padding: 75px 75px 75px 0px;;
 
-                    &:before {
-                        border-color: #F461A8 transparent transparent;
+                    .bg {
+                        background: $magenta;
+                        left: -50%;
+
+                        &:before {
+                            border-color: #F461A8 transparent transparent;
+                        }
                     }
                 }
 
                 &.for-employers {
-                    background: $cyan;
-                    padding-right: 20%;
+                    padding: 75px 0px 75px 75px;
 
-                    &:before {
-                        border-color: #50A3CB transparent transparent;
+                    .bg {
+                        background: $cyan;
+                        right: -50%;
+
+                        &:before {
+                            border-color: #50A3CB transparent transparent;
+                        }
                     }
+                }
+
+                .bg {
+                    bottom: 0;
+                    height: 100%;
+                    left: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: auto;
                 }
             }
 

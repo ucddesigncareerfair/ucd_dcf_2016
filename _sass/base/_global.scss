@@ -40,6 +40,7 @@ p {
 .btn {
     background: #eeeeee;
     @include border-radius(50px);
+    border-width: 0px;
     color: #444444;
     font-size: 16px;
     font-weight: 400;
@@ -48,15 +49,15 @@ p {
     @include transition(color 0.15s, background 0.15s);
 
     &.btn-cyan {
-        @include button-variant($cyan, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
+        @include button-variant($cyan, $yellow, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
     }
 
     &.btn-yellow {
-        @include button-variant($yellow, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
+        @include button-variant($yellow, $yellow, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
     }
 
     &.btn-magenta {
-        @include button-variant($magenta, transparent, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
+        @include button-variant($magenta, $yellow, #ffffff, 0px 1px 4px rgba(0,0,0,0.2), none);
     }
 
     &.btn-white {
@@ -72,6 +73,7 @@ p {
     &.btn-inverted {
         background: transparent;
         border-width: 2px;
+        @include box-shadow(none !important);
     }
 
     &.btn-small {
@@ -80,10 +82,6 @@ p {
         letter-spacing: 0.5px;
         padding: 8px 18px;
     }
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
 }
 
 .page-title {
