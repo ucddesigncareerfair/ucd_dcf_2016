@@ -92,11 +92,12 @@ p {
         margin: 0px;
     }
 
-    &.team {
+    &.team,
+    &.contact {
         background: $yellow;
     }
 
-    &.contact {
+    &.students {
         background: $magenta;
     }
 }
