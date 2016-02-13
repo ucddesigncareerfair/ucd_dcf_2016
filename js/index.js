@@ -22,7 +22,8 @@ function checkOptionsHeight() {
     var feHeight = $('.for-employers').outerHeight();
     if(fsHeight > feHeight) {
         $('.for-employers').css('height', fsHeight);
-    } else if(fsHeight < feHeight) {
+    }
+    if(fsHeight < feHeight) {
         $('.for-students').css('height', feHeight);
     }
 }
