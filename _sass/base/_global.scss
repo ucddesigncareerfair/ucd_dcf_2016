@@ -85,6 +85,7 @@ p {
 }
 
 .page-title {
+    background: $yellow;
     color: #ffffff;
     padding: 30px;
 
@@ -92,12 +93,20 @@ p {
         margin: 0px;
     }
 
-    &.team,
-    &.contact {
-        background: $yellow;
-    }
-
     &.students {
         background: $magenta;
+    }
+
+    &.employers {
+        background: $cyan;
+    }
+}
+
+.coming-soon {
+    padding: 75px 0px;
+    text-align: center;
+
+    img {
+        max-width: 550px;
     }
 }
