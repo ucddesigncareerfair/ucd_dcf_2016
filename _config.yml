@@ -8,7 +8,7 @@
 # Site settings
 title: UC Davis Design Career Fair 2016
 email: ucddesigncareerfair@gmail.com
-description: > # The 2nd Annual UC Davis Design Career Fair aims to empower students to take risks not only in their designs, but also career aspirations. By providing students career resources we hope to bridge our talented designers to esteemed companies.
+description: "The 2nd Annual UC Davis Design Career Fair aims to empower students to take risks not only in their designs, but also career aspirations. By providing students career resources we hope to bridge our talented designers to esteemed companies."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ucddesigncareerfair.com" # the base hostname & protocol for your site
 
