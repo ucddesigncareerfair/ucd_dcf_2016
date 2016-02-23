@@ -4,8 +4,33 @@
     box-sizing:         border-box;
 }
 
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/AvenirNextLTPro-It.otf") format("opentype");
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+    font-weight: 600;
+}
+
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Avenir Next', 'Source Sans Pro', Helvetica, sans-serif;
     font-size: 1em;
     font-size: 14px;
     opacity: 0;
@@ -42,6 +67,7 @@ p {
     @include border-radius(50px);
     border-width: 0px;
     color: #444444;
+    font-family: 'Source Sans Pro';
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
