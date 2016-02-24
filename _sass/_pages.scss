@@ -11,6 +11,15 @@ body {
     padding: 100px 0px;
 }
 
+form {
+    color: #222222;
+
+    textarea.form-control {
+        height: 150px;
+        resize: vertical;
+    }
+}
+
 footer {
     background: none;
     color: #666666;
