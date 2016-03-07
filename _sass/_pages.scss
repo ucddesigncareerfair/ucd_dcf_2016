@@ -50,3 +50,148 @@ body.students {
         padding: 75px 0px;
     }
 }
+
+body.team {
+
+    section#us header#about-us h1{
+        font-weight:400;
+    }
+
+    section#us article img {
+        display:block;
+        margin:auto;
+        width:100%;
+    }
+
+    section#us article p {
+        width:700px;
+        margin:auto;
+        margin-top:40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.25px;
+        text-align: justify;
+    }
+
+     nav#button{
+        margin:40px 0px;
+        text-align:center;
+    }
+
+     nav#button ul li {
+        display: inline;
+        list-style: none;
+        margin: 20px;
+    }
+
+    section#us {
+        position: relative;
+
+        .bg {
+            background: url('../img/about_header.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    section#team article ul {
+        margin-right: -3px;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+
+    section#team article ul li{
+        height: 350px;
+        margin-left: -1px;
+        margin-top:-1px;
+        float:left;
+        list-style-type: none;
+        text-align:center;
+        border: 1px solid #e1e1e1;
+        width: 33.333%;
+        position: relative;
+        overflow: hidden;
+        @include transition(color 0.5s, background 0.5s);
+    }
+
+    section#team article ul li h2,
+    section#team article ul li h3 {
+        @include transition(transform 0.5s);
+    }
+
+    section#team article ul li h2 {
+        margin: 0px;
+    }
+
+    section#team article ul li h3 {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 auto;
+        max-width: 400px;
+        opacity: 0;
+        @include transition(transform 0.5s, opacity 0.5s);
+    }
+
+    section#team {
+        .info {
+            position: absolute;
+            @include transform(translateY(-50%));
+            top: 50%;
+            width: 100%;
+        }
+    }
+
+    section#team article ul li:nth-child(1):hover,
+    section#team article ul li:nth-child(6):hover {
+        background: #67acd3;
+    }
+
+    section#team article ul li:nth-child(2):hover,
+    section#team article ul li:nth-child(4):hover {
+        background: #ef79af;
+    }
+
+    section#team article ul li:nth-child(3):hover,
+    section#team article ul li:nth-child(5):hover {
+        background: #f9d555;
+    }
+
+    section#team article ul li:hover h2 {
+        color: #ffffff;
+        @include transform(translateY(-10px));
+    }
+
+    section#team article ul li:hover h3 {
+        color: #ffffff;
+        opacity: 1;
+        @include transform(translateY(10px));
+    }
+}
+
+body.fair {
+
+    .fairbg {
+        position: relative;
+        padding: 100px 0px;
+        width: 100%;
+        background-color: #84beda;
+    }
+
+    h1 {
+        display: inline;
+        padding: 0px 30px 0px 0px;
+        font-size: 27px;
+        font-weight: 200;
+        color: white;
+    }
+
+    .fair-info {
+        width:8.5in;
+        margin:50px auto 35px auto;
+    }
+}
