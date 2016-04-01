@@ -1,0 +1,27 @@
+---
+---
+
+body.calendar {
+    .page-content {
+        min-height: 600px;
+    }
+
+    table.table {
+        width: 9in;
+        margin: 30px auto 20px auto;
+    }
+
+    table.table th {
+        background-color: #F765AB;
+        color:white;
+    }
+
+    table.table tr.d-day {
+        color: #F765AB;
+        font-weight: 600;
+    }
+
+    table.table a {
+        color: black;
+    }
+}
