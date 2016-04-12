@@ -103,6 +103,8 @@ section {
     } // end .main
 
     &.options {
+        overflow-x: hidden;
+
         .left,
         .right {
             display: inline-block;
