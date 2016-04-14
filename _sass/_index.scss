@@ -173,11 +173,26 @@ section {
                     width: auto;
                 }
             }
+            
+            /*
+            .carousel{
+                position: absolute;
+                top:-10px;
+                left:-80px;
+            }
+            */
 
             h1 {
-                font-size: 45px;
-                margin: 0 0 15px 0;
+                font-size: 40px;
+                margin: 0 0 15px 0px;
+                /*margin: 0 0 15px 108px;*/
             }
+            
+            /*
+            p{
+                margin: 0 0 0 110px;
+            }
+            */
 
             ul, li {
                 list-style: none;
