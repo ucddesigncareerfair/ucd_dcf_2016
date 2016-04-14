@@ -135,34 +135,45 @@ body.team {
         background-size: 100%;
     }  
     
-    section#team article ul li h2,
-    section#team article ul li h3 {
-        @include transition(transform 0.5s);
-    }
-
-    section#team article ul li h2 {
-        border: 2px solid;
-        border-radius:25px;
-        display: inline-block;
-        font-size: 16px;
-        margin: 0px;
-        padding: 12px 25px 8px 25px;
-    }
-
-    section#team article ul li h3 {
-        font-size: 16px;
-        line-height: 20px;
-        margin: 0 auto;
-        max-width: 400px;
+    section#team article ul li .team,
+    section#team article ul li .names {
         opacity: 0;
         @include transition(transform 0.5s, opacity 0.5s);
     }
 
+    section#team article ul li h2 span {
+        border: 2px solid #ffffff;
+        border-radius:25px;
+        display: inline-block;
+        font-size: 16px;
+        padding: 12px 25px 8px 25px;
+    }
+
+    section#team article ul li h2,
+    section#team article ul li .names {
+        margin: -20px 0px 0px 0px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+    }
+
+    section#team article ul li .names span {
+        display: block;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
     section#team {
         .info {
+            bottom: 0;
+            height: 100%;
+            left: 0;
             position: absolute;
-            @include transform(translateY(-50%));
-            top: 95%;
+            right: 0;
+            top: 0;
             width: 100%;
         }
     }
@@ -180,7 +191,7 @@ body.team {
     }
     
     section#team article ul li:hover .bg {
-        opacity: 0.75;
+        opacity: 0.9;
     }
     
     section#team article ul li:nth-child(1) .bg,
@@ -198,15 +209,16 @@ body.team {
         background: #f9d555;
     }
     
-    section#team article ul li:hover h2 {
-        /*color: #ffffff;*/
-        @include transform(translateY(-150px));
-    }
-
-    section#team article ul li:hover h3 {
+    section#team article ul li:hover .team {
         /*color: #ffffff;*/
         opacity: 1;
-        @include transform(translateY(-100px));
+        @include transform(translateY(-30px));
+    }
+
+    section#team article ul li:hover .names {
+        /*color: #ffffff;*/
+        opacity: 1;
+        @include transform(translateY(30px));
     }
 }
 
