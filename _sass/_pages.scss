@@ -83,6 +83,8 @@ body.team {
     }
 
     section#team article ul li{
+        background-size: cover;
+        background-repeat: no-repeat;
         height: 350px;
         margin-left: -1px;
         margin-top:-1px;
@@ -106,33 +108,27 @@ body.team {
     
     section#team article ul li:nth-child(1){
         background-image: url(../img/team_photos/officers.gif);
-        background-size: 100%;
     }  
     
     
     section#team article ul li:nth-child(2){
         background-image: url(../img/team_photos/event.gif);
-        background-size: 100%;
     } 
     
     section#team article ul li:nth-child(3){
         background-image: url(../img/team_photos/exhibits.gif);
-        background-size: 100%;
     }  
     
     section#team article ul li:nth-child(4){
         background-image: url(../img/team_photos/graphics.gif);
-        background-size: 100%;
     }  
     
     section#team article ul li:nth-child(5){
         background-image: url(../img/team_photos/outreach.gif);
-        background-size: 100%;
     } 
     
     section#team article ul li:nth-child(6){
         background-image: url(../img/team_photos/web.gif);
-        background-size: 100%;
     }  
     
     section#team article ul li .team,
