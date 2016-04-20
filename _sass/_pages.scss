@@ -22,6 +22,8 @@ body.register {
 
 body.students {
     #rsvp {
+        background: #1D536C;
+        color: #ffffff;
         padding: 75px 0px;
     }
 }
@@ -391,5 +393,137 @@ body.prepare{
         font-size: 16px;
         margin-top: 20px;
         margin-bottom: 0px;
+    }
+}
+
+body.company-bios {
+    .top-margin-zero {margin-top: 0px; margin-bottom: 0px;}
+    .no-height {min-height: 0px;}
+    .bar {
+        background: #429dc9;
+        background: -moz-linear-gradient(left, #429dc9 0%, #ee519d 50%, #f7ca18 100%);
+        background: -webkit-linear-gradient(left, #429dc9 0%, #ee519d 50%, #f7ca18 100%);
+        background: linear-gradient(to right, #429dc9 0%, #ee519d 50%, #f7ca18 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#429dc9', endColorstr='#f7ca18',GradientType=1 );
+        display: block;
+        height: 10px;
+        width: 100%;
+        margin-top: 1px;
+    }
+    .page-title.company-bios{background: #EDC11E;}
+    .graphic-section {background: #1EA2DD; padding:0px; color: #ffffff;}
+    .fasion-section {background: #DA1983; padding: 0px; color: #ffffff;}
+    .fontsize-title {font-size: 70px;}
+    .interior-section{background:#F2E725;padding: 0px; color: #ffffff;}
+    ul{list-style-type: none; padding-left: 0px;}
+
+    img.company-logo{
+        border-radius:0px;
+        height:80px;
+        margin-bottom:10px;
+    }
+
+    h5.company-name{
+        font-weight:700; 
+        letter-spacing: 1px;
+    }
+
+    h5.hiring-for{
+        font-style: italic; 
+        font-size:13px;
+        margin-bottom:20px;
+    }
+
+    h5.hiring-for ul li{
+        background-color: white;
+    }
+    h5 {
+    color: black;
+    }
+
+    .bar {
+        margin: 0px;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .row {
+        margin: auto;
+        width: 100%;
+    }
+
+    .accordion {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .accordion .graphic-section {
+        background-color: #429DC9;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .accordion .interior-section {
+        background-color: black;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .accordion .fasion-section {
+        background-color: #EE519D;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .accordion li {
+        background-color: #FCD84B;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .accordion li:last-child {
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .accordion li a {
+        color: #fff;
+        font-size: 14px;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    .accordion li h3 {
+        margin: 0;
+        font-size: 65px;
+        padding: 15px;
+       
+        padding-bottom: 10px;
+        letter-spacing: 7px;
+    }
+
+    .page-content {
+        margin-bottom: -10px;
+    }
+
+    .accordion {
+        .hidden-content {
+            background: #ffffff;
+            max-height: 0px;
+            overflow: hidden;
+            @include transition(max-height 0.5s);
+
+            &.active {
+                max-height: 1000px;
+            }
+
+            h5, p {
+                color: #000000;
+                font-size: 14px;
+                margin: 10px;
+            }
+        }
     }
 }
