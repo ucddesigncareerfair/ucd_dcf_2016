@@ -16,10 +16,20 @@ body.calendar {
         color:white;
     }
 
+    
     table.table tr.d-day {
         color: #F765AB;
         font-weight: 600;
     }
+    
+    /*
+    table.table tr.past {
+        background-color: darkgray;
+    }
+    
+    table.table tr.upcoming{
+        background-color:#fff100;
+    }*/
 
     table.table a {
         color: black;
