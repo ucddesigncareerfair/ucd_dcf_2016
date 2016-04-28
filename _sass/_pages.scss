@@ -102,6 +102,14 @@ body.team {
         @include transition(color 0.5s);
     }
     
+    section#team article ul li a{
+        color:white;
+    }
+    
+    section#team article ul li a:hover{
+        text-decoration: underline;
+    }
+    
     /*
     section#team article ul li:nth-child(1) .bg {
         background-image: url(../img/team_photos/event.gif);
@@ -190,7 +198,7 @@ body.team {
     }
     
     section#team article ul li:hover .bg {
-        opacity: 0.9;
+        opacity: 1;
     }
     
     section#team article ul li:nth-child(1) .bg,
